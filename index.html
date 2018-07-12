@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body > div {
+            height: 600px;
+            background: url("img/exam-005.jpg") no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        body > div > div:nth-child(1) {
+            height: 500px;
+            width: 341px;
+            background: url("img/exam-004.png") no-repeat;
+            background-size: 100% 100%;
+            margin-left:100px;
+            margin-top: 100px;
+            float: left;
+            transform: rotate(-15deg);
+            transition: 1s;
+            transform-origin: 0 100%;
+        }
+        body > div > div:nth-child(2) {
+            height: 260px;
+            width: 260px;
+            background: url("img/exam-003.png") no-repeat;
+            background-size: 100% 100%;
+            margin-top: 300px;
+            margin-left: 10px;
+            float: left;
+            transition: 0.5s 0.3s;
+            transform-origin: right bottom;
+        }
+        body > div > div:nth-child(1):active {
+            transform: rotate(32deg);
+        }
+        body > div > div:nth-child(1):active + div { 
+            transform: scale(0.5) skewY(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
